@@ -65,7 +65,7 @@
 #if SVGKIT_MAC
         scale = MAX(scale, [[NSScreen mainScreen] backingScaleFactor]);
 #else
-        scale = MAX(scale, [[UIScreen mainScreen] scale]);
+        scale = MAX(scale, 3);
 #endif
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
         CGContextRef offscreenContext = CGBitmapContextCreate(NULL,
